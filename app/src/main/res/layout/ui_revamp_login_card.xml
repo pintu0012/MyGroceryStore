@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login_card_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ui_revamp_login_rounded_white_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin_24dp"
+    android:paddingRight="@dimen/margin_24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/enter_number_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:fontFamily="@font/proximanovabold"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/enter_number_label"
+            android:textColor="@color/color_cc00"
+            android:textSize="@dimen/textsize_14sp" />
+
+        <TextView
+            android:id="@+id/previously_logged_in_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:fontFamily="@font/proxima_nova_reg"
+            android:textColor="@color/color_afb5"
+            android:textSize="@dimen/textsize_12sp"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/mobile_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:fontFamily="@font/proxima_nova_reg"
+            android:hint="@string/mobile_number_label"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="10"
+            android:textColor="@color/black2d383c"
+            android:textColorHint="@color/color_afb5"
+            android:textSize="@dimen/textsize_14sp" />
+        <TextView
+            android:id="@+id/terms_and_conditions_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_8dp"
+            android:autoLink="web"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:textSize="@dimen/textsize_12sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/continue_login"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_24dp"
+            android:layout_marginBottom="@dimen/margin_30dp"
+            android:background="@drawable/ui_revamp_button_bg_green"
+            android:fontFamily="@font/proximanovasemibold"
+            android:minWidth="144dp"
+            android:minHeight="36dp"
+            android:text="@string/continue_label"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_11sp" />
+
+        <TextView
+            android:id="@+id/explore_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/margin_30dp"
+            android:fontFamily="@font/proximanovabold"
+            android:text="@string/explore_now"
+            android:textAllCaps="true"
+            android:textColor="@color/color_4d59"
+            android:textSize="@dimen/textsize_11sp"
+            android:visibility="gone" />
+    </LinearLayout>
+</RelativeLayout>

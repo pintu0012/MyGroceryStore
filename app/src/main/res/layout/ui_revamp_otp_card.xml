@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/otp_card_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ui_revamp_login_rounded_white_bg"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin_24dp"
+    android:paddingRight="@dimen/margin_24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/enter_otp_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_20dp"
+            android:fontFamily="@font/proximanovasemibold"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/enter_otp_label"
+            android:textColor="@color/color_cc00"
+            android:textSize="@dimen/textsize_14sp" />
+
+        <RelativeLayout
+            android:id="@+id/number_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_16dp">
+
+            <LinearLayout
+                android:id="@+id/change_number_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mobile_number_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/proxima_nova_reg"
+                    android:textColor="@color/color_4a4a"
+                    android:textSize="@dimen/textsize_12" />
+
+                <TextView
+                    android:id="@+id/change_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:fontFamily="@font/proximanovasemibold"
+                    android:text="@string/change_label"
+                    android:textAllCaps="true"
+                    android:textColor="@color/green84c225"
+                    android:textSize="@dimen/textsize_13sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/otp_view_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_12dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/otp_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="0"
+                app:layout_constraintStart_toStartOf="0"
+                app:layout_constraintTop_toTopOf="0">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/proximanovasemibold"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:minWidth="@dimen/margin_30dp"
+                    android:textColor="@color/black2d383c"
+                    android:textSize="@dimen/size_16sp"
+                    app:backgroundTint="@drawable/ui_revamp_editext_tint_selector"
+                    app:layout_constraintStart_toStartOf="0"
+                    app:layout_constraintTop_toTopOf="0" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_16dp"
+                    android:layout_marginRight="@dimen/dimen_16dp"
+                    android:fontFamily="@font/proximanovasemibold"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:minWidth="@dimen/margin_30dp"
+                    android:textColor="@color/black2d383c"
+                    android:textSize="@dimen/size_16sp"
+                    app:backgroundTint="@drawable/ui_revamp_editext_tint_selector"
+                    app:layout_constraintStart_toEndOf="@+id/one"
+                    app:layout_constraintTop_toTopOf="0" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_16dp"
+                    android:layout_marginRight="@dimen/dimen_16dp"
+                    android:fontFamily="@font/proximanovasemibold"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:minWidth="@dimen/margin_30dp"
+                    android:textColor="@color/black2d383c"
+                    android:textSize="@dimen/size_16sp"
+                    app:backgroundTint="@drawable/ui_revamp_editext_tint_selector"
+                    app:layout_constraintStart_toEndOf="@+id/two"
+                    app:layout_constraintTop_toTopOf="0" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_16dp"
+                    android:layout_marginRight="@dimen/dimen_16dp"
+                    android:fontFamily="@font/proximanovasemibold"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:minWidth="@dimen/margin_30dp"
+                    android:textColor="@color/black2d383c"
+                    android:textSize="@dimen/size_16sp"
+                    app:backgroundTint="@drawable/ui_revamp_editext_tint_selector"
+                    app:layout_constraintStart_toEndOf="@+id/three"
+                    app:layout_constraintTop_toTopOf="0" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_16dp"
+                    android:layout_marginRight="@dimen/dimen_16dp"
+                    android:fontFamily="@font/proximanovasemibold"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:minWidth="@dimen/margin_30dp"
+                    android:textColor="@color/black2d383c"
+                    android:textSize="@dimen/size_16sp"
+                    app:backgroundTint="@drawable/ui_revamp_editext_tint_selector"
+                    app:layout_constraintStart_toEndOf="@+id/four"
+                    app:layout_constraintTop_toTopOf="0" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/six"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_16dp"
+                    android:layout_marginRight="@dimen/dimen_16dp"
+                    android:fontFamily="@font/proximanovasemibold"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:minWidth="@dimen/margin_30dp"
+                    android:textColor="@color/black2d383c"
+                    android:textSize="@dimen/size_16sp"
+                    app:backgroundTint="@drawable/ui_revamp_editext_tint_selector"
+                    app:layout_constraintStart_toEndOf="@+id/five"
+                    app:layout_constraintTop_toTopOf="0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <EditText
+                android:id="@+id/bb_otp_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp"
+                app:layout_constraintTop_toTopOf="0" />
+
+            <TextView
+                android:id="@+id/timer_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_15dp"
+                android:fontFamily="@font/proxima_nova_reg"
+                android:text="00:30"
+                android:textColor="@color/color_747e"
+                android:textSize="@dimen/textsize_12"
+                android:visibility="visible"
+                app:layout_constraintLeft_toLeftOf="0"
+                app:layout_constraintRight_toRightOf="0"
+                app:layout_constraintTop_toBottomOf="@+id/bb_otp_view" />
+
+            <LinearLayout
+                android:id="@+id/didnt_get_otp_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/timer_text">
+
+                <TextView
+                    android:id="@+id/didnt_get_otp_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/proxima_nova_reg"
+                    android:text="@string/did_not_receive_otp"
+                    android:textColor="@color/color_4a4a"
+                    android:textSize="@dimen/textsize_12sp" />
+
+                <TextView
+                    android:id="@+id/resend_otp_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_9dp"
+                    android:fontFamily="@font/proximanovasemibold"
+                    android:text="@string/resend_otp"
+                    android:textAllCaps="true"
+                    android:textColor="@color/green84c225"
+                    android:textSize="@dimen/textsize_13sp" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/login_now"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_24dp"
+            android:layout_marginBottom="@dimen/margin_30dp"
+            android:background="@drawable/ui_revamp_button_bg_green"
+            android:fontFamily="@font/proximanovasemibold"
+            android:minWidth="144dp"
+            android:minHeight="36dp"
+            android:text="@string/login_now_label"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_11sp" />
+    </LinearLayout>
+</RelativeLayout>
