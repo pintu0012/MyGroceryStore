@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="@dimen/dimen_150dp"
+    android:id="@+id/cardview"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="@dimen/dimen_10dp"
+    android:foreground="?attr/selectableItemBackground"
+    android:layout_margin="@dimen/dimen_10dp"
+    app:cardCornerRadius="@dimen/margin_15dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="@dimen/dimen_150dp">
+
+        <ImageView
+            android:layout_width="@dimen/margin_50dp"
+            android:layout_height="@dimen/margin_50dp"
+            android:layout_margin="@dimen/dimen_10dp"
+            android:src="@drawable/sale_badge"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+            <ImageView
+                android:id="@+id/imageview"
+                android:layout_width="@dimen/margin_80dp"
+                android:layout_height="@dimen/margin_80dp"
+                android:src="@drawable/vegetable"/>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageview"
+                android:textColor="@color/white"
+                android:padding="@dimen/dimen_5dp"
+                android:fontFamily="@font/proximanovabold"
+                android:layout_centerHorizontal="true"
+                android:text="Heading"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

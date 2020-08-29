@@ -10,5 +10,24 @@
     <string name="progress_resend_otp">Resend OTP…</string>
     <string name="resend_otp">Resend OTP</string>
     <string name="login_now_label">Login Now</string>
+    <string name="search">Search</string>
+    <string name="search_1000_products">Search 1000+ products</string>
+    <string name="category">Categories</string>
+    <string name="orders">Orders</string>
+    <string name="chat">Chat</string>
+    <string name="wallet">Wallet</string>
+    <string name="write_message_here">Write message here...</string>
+    <string name="wallet_balance">Wallet Balance</string>
+    <string name="_0">0</string>
+    <string name="reserved_amount">Reserved Amount</string>
+    <string name="enter_the_recharge_amount">Enter the recharge amount</string>
+    <string name="_1000">+1000</string>
+    <string name="_2000">+2000</string>
+    <string name="_3000">+3000</string>
+    <string name="_4000">+4000</string>
+    <string name="add_money">Add Money</string>
+    <string name="recharge_history">RECHARGE HISTORY</string>
+    <string name="billing_history">BILLING HISTORY</string>
+    <string name="reserve_money">RESERVE MONEY</string>
 
 </resources>

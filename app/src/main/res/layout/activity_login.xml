@@ -18,6 +18,7 @@
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/intro_viewpager"
             android:layout_width="match_parent"
+            android:layout_centerInParent="true"
             android:layout_height="wrap_content" />
 
         <com.google.android.material.tabs.TabLayout

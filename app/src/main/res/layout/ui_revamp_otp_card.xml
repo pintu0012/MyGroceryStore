@@ -56,25 +56,23 @@
                     android:fontFamily="@font/proximanovasemibold"
                     android:text="@string/change_label"
                     android:textAllCaps="true"
-                    android:textColor="@color/green84c225"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="@dimen/textsize_13sp" />
             </LinearLayout>
         </RelativeLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <RelativeLayout
             android:id="@+id/otp_view_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_12dp">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <LinearLayout
                 android:id="@+id/otp_layout"
                 android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
-                app:layout_constraintEnd_toEndOf="0"
-                app:layout_constraintStart_toStartOf="0"
-                app:layout_constraintTop_toTopOf="0">
+                android:visibility="visible">
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/one"
@@ -87,9 +85,7 @@
                     android:minWidth="@dimen/margin_30dp"
                     android:textColor="@color/black2d383c"
                     android:textSize="@dimen/size_16sp"
-                    app:backgroundTint="@drawable/ui_revamp_editext_tint_selector"
-                    app:layout_constraintStart_toStartOf="0"
-                    app:layout_constraintTop_toTopOf="0" />
+                    app:backgroundTint="@drawable/ui_revamp_editext_tint_selector" />
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/two"
@@ -105,8 +101,7 @@
                     android:textColor="@color/black2d383c"
                     android:textSize="@dimen/size_16sp"
                     app:backgroundTint="@drawable/ui_revamp_editext_tint_selector"
-                    app:layout_constraintStart_toEndOf="@+id/one"
-                    app:layout_constraintTop_toTopOf="0" />
+                     />
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/three"
@@ -121,9 +116,7 @@
                     android:minWidth="@dimen/margin_30dp"
                     android:textColor="@color/black2d383c"
                     android:textSize="@dimen/size_16sp"
-                    app:backgroundTint="@drawable/ui_revamp_editext_tint_selector"
-                    app:layout_constraintStart_toEndOf="@+id/two"
-                    app:layout_constraintTop_toTopOf="0" />
+                    app:backgroundTint="@drawable/ui_revamp_editext_tint_selector" />
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/four"
@@ -139,8 +132,7 @@
                     android:textColor="@color/black2d383c"
                     android:textSize="@dimen/size_16sp"
                     app:backgroundTint="@drawable/ui_revamp_editext_tint_selector"
-                    app:layout_constraintStart_toEndOf="@+id/three"
-                    app:layout_constraintTop_toTopOf="0" />
+                 />
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/five"
@@ -155,9 +147,7 @@
                     android:minWidth="@dimen/margin_30dp"
                     android:textColor="@color/black2d383c"
                     android:textSize="@dimen/size_16sp"
-                    app:backgroundTint="@drawable/ui_revamp_editext_tint_selector"
-                    app:layout_constraintStart_toEndOf="@+id/four"
-                    app:layout_constraintTop_toTopOf="0" />
+                    app:backgroundTint="@drawable/ui_revamp_editext_tint_selector" />
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/six"
@@ -172,17 +162,15 @@
                     android:minWidth="@dimen/margin_30dp"
                     android:textColor="@color/black2d383c"
                     android:textSize="@dimen/size_16sp"
-                    app:backgroundTint="@drawable/ui_revamp_editext_tint_selector"
-                    app:layout_constraintStart_toEndOf="@+id/five"
-                    app:layout_constraintTop_toTopOf="0" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    app:backgroundTint="@drawable/ui_revamp_editext_tint_selector" />
+            </LinearLayout>
 
             <EditText
                 android:id="@+id/bb_otp_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_10dp"
-                app:layout_constraintTop_toTopOf="0" />
+                android:visibility="gone" />
 
             <TextView
                 android:id="@+id/timer_text"
@@ -191,17 +179,16 @@
                 android:layout_marginTop="@dimen/margin_15dp"
                 android:fontFamily="@font/proxima_nova_reg"
                 android:text="00:30"
+                android:layout_below="@+id/otp_layout"
                 android:textColor="@color/color_747e"
                 android:textSize="@dimen/textsize_12"
-                android:visibility="visible"
-                app:layout_constraintLeft_toLeftOf="0"
-                app:layout_constraintRight_toRightOf="0"
-                app:layout_constraintTop_toBottomOf="@+id/bb_otp_view" />
+                android:visibility="visible" />
 
             <LinearLayout
                 android:id="@+id/didnt_get_otp_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/otp_layout"
                 android:layout_marginTop="@dimen/margin_20dp"
                 android:gravity="center"
                 android:orientation="horizontal"
@@ -224,10 +211,10 @@
                     android:fontFamily="@font/proximanovasemibold"
                     android:text="@string/resend_otp"
                     android:textAllCaps="true"
-                    android:textColor="@color/green84c225"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="@dimen/textsize_13sp" />
             </LinearLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/login_now"

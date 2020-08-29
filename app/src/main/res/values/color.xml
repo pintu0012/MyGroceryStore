@@ -68,9 +68,9 @@
     <color name="cardview_shadow_start_color">#37000000</color>
     <color name="cb_errorRed">#e40000</color>
     <color name="chrome_grey">#f2f2f2</color>
-    <color name="colorAccent">#0a4d6d</color>
-    <color name="colorPrimary">@android:color/white</color>
-    <color name="colorPrimaryDark">#fff</color>
+    <color name="colorAccent">#ffffff</color>
+    <color name="colorPrimary">#7103a3</color>
+    <color name="colorPrimaryDark">#55017a</color>
     <color name="color_3300">#33000000</color>
     <color name="color_4a4a">#4a4a4a</color>
     <color name="color_4d59">#4d595e</color>
