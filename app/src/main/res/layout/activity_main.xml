@@ -37,6 +37,22 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
+                    android:padding="@dimen/dimen_10dp"
+                    android:fontFamily="@font/proximanovabold"
+                    android:textSize="@dimen/dimen_18dp"
+                    android:text="Deal of the Day"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/deal_recycler"
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/dimen_10dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:fontFamily="@font/proximanovabold"
                     android:textSize="@dimen/dimen_18dp"
                     android:padding="@dimen/dimen_10dp"

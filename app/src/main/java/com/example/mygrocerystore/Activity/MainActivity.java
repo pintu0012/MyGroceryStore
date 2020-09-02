@@ -16,8 +16,10 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import com.example.mygrocerystore.Adapter.CategoryListViewAdapter;
+import com.example.mygrocerystore.Adapter.CategoryRecyclerAdapter;
 import com.example.mygrocerystore.Adapter.OffersRecyclerVIewAdapter;
 import com.example.mygrocerystore.Common.ExpandableHeightGridView;
+import com.example.mygrocerystore.Common.ItemOffsetDecoration;
 import com.example.mygrocerystore.Model.CategoryItemModel;
 import com.example.mygrocerystore.Model.CategoryModel;
 import com.example.mygrocerystore.Model.OffersModel;
@@ -28,13 +30,14 @@ import java.util.ArrayList;
 
 public class MainActivity extends BaseActivity {
 
-    private RecyclerView offersrecylerView;
+    private RecyclerView offersrecylerView,deal_recycler;
     private ExpandableHeightGridView category_listview;
     private ImageButton menu_button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         initialiseViews();
+        DEALS_RECYCLER();
         OFFERS_RECYLER();
         CATEGORY_LISTVIEW();
 
@@ -48,6 +51,25 @@ public class MainActivity extends BaseActivity {
                 }
             }
         });
+    }
+
+    private void DEALS_RECYCLER() {
+        ArrayList<CategoryItemModel> categoryItemModelArrayList = new ArrayList<>();
+        categoryItemModelArrayList.add(new CategoryItemModel(0,R.drawable.onion, "Onion", "1KG","$80", true));
+        categoryItemModelArrayList.add(new CategoryItemModel(0,R.drawable.muffin, "Muffin", "250GM","$70", true));
+        categoryItemModelArrayList.add(new CategoryItemModel(0,R.drawable.cookies, "Cookies", "200GM","$120", true));
+        categoryItemModelArrayList.add(new CategoryItemModel(0,R.drawable.eggplant, "Egg Plant", "500GM","$65", true));
+        categoryItemModelArrayList.add(new CategoryItemModel(0,R.drawable.broccoli, "Broccoli", "250GM","$25", true));
+
+        ItemOffsetDecoration itemDecoration = new ItemOffsetDecoration(MainActivity.this, R.dimen.dimen_8dp);
+        deal_recycler.addItemDecoration(itemDecoration);
+
+        LinearLayoutManager linearManagerV = new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL, false);
+        deal_recycler.setLayoutManager(linearManagerV);
+
+        CategoryRecyclerAdapter categoryRecyclerAdapter = new CategoryRecyclerAdapter(MainActivity.this, categoryItemModelArrayList);
+        deal_recycler.setAdapter(categoryRecyclerAdapter);
+
     }
 
     private void CATEGORY_LISTVIEW() {
@@ -106,6 +128,7 @@ public class MainActivity extends BaseActivity {
     }
 
     private void initialiseViews() {
+        deal_recycler  = findViewById(R.id.deal_recycler);
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         menu_button = findViewById(R.id.menu_button);

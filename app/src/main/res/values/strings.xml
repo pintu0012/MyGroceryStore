@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyGroceryStore</string>
+    <string name="app_name">MGrocery</string>
     <string name="enter_number_label">Enter Number</string>
     <string name="mobile_number_label">Mobile Number (10-digit)</string>
     <string name="continue_label">Continue</string>
