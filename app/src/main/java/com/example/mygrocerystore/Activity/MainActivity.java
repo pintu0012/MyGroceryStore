@@ -2,11 +2,13 @@ package com.example.mygrocerystore.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -16,6 +18,7 @@ import android.widget.ImageButton;
 import com.example.mygrocerystore.Adapter.CategoryListViewAdapter;
 import com.example.mygrocerystore.Adapter.OffersRecyclerVIewAdapter;
 import com.example.mygrocerystore.Common.ExpandableHeightGridView;
+import com.example.mygrocerystore.Model.CategoryItemModel;
 import com.example.mygrocerystore.Model.CategoryModel;
 import com.example.mygrocerystore.Model.OffersModel;
 import com.example.mygrocerystore.R;
@@ -50,14 +53,39 @@ public class MainActivity extends BaseActivity {
     private void CATEGORY_LISTVIEW() {
 
         ArrayList<CategoryModel> categoryModelArrayList = new ArrayList<>();
-        categoryModelArrayList.add(new CategoryModel(0, R.drawable.vegetable, R.color.bbd_red, "Vegetables"));
-        categoryModelArrayList.add(new CategoryModel(1, R.drawable.vegetable, R.color.yellow, "Bakery"));
-        categoryModelArrayList.add(new CategoryModel(2, R.drawable.vegetable, R.color.green, "Milk"));
-        categoryModelArrayList.add(new CategoryModel(3, R.drawable.vegetable, R.color.blue, "Soft drinks"));
-        categoryModelArrayList.add(new CategoryModel(4, R.drawable.vegetable, R.color.bbd_pink, "Vegetables"));
-        categoryModelArrayList.add(new CategoryModel(5, R.drawable.vegetable, R.color.purple, "Vegetables"));
-        categoryModelArrayList.add(new CategoryModel(6, R.drawable.vegetable, R.color.bbd_gray, "Vegetables"));
-        categoryModelArrayList.add(new CategoryModel(7, R.drawable.vegetable, R.color.bbd_pink, "Vegetables"));
+        ArrayList<CategoryItemModel> categoryItemModelArrayList = new ArrayList<>();
+
+        categoryItemModelArrayList.add(new CategoryItemModel(0,R.drawable.onion, "Onion", "1KG","$80", true));
+        categoryItemModelArrayList.add(new CategoryItemModel(0,R.drawable.potato, "Potato", "1KG","$45", true));
+        categoryItemModelArrayList.add(new CategoryItemModel(0,R.drawable.tomato, "Tomato", "1KG","$40", false));
+        categoryItemModelArrayList.add(new CategoryItemModel(0,R.drawable.capsicum, "Capsicum", "1KG","$35", true));
+        categoryItemModelArrayList.add(new CategoryItemModel(0,R.drawable.mushroom, "Mushrooms", "500GM","$55", true));
+        categoryItemModelArrayList.add(new CategoryItemModel(0,R.drawable.broccoli, "Broccoli", "250GM","$25", true));
+        categoryItemModelArrayList.add(new CategoryItemModel(0,R.drawable.carrot, "Carrot", "500GM","$45", true));
+        categoryItemModelArrayList.add(new CategoryItemModel(0,R.drawable.cabbage, "Cabbage", "1KG","$75", true));
+        categoryItemModelArrayList.add(new CategoryItemModel(0,R.drawable.eggplant, "Egg Plant", "500GM","$65", true));
+
+
+        categoryModelArrayList.add(new CategoryModel(0, R.drawable.vegetable, R.color.bbd_red, "Vegetables", categoryItemModelArrayList));
+
+        categoryItemModelArrayList = new ArrayList<>();
+        categoryItemModelArrayList.add(new CategoryItemModel(0,R.drawable.bread_icon, "Bread", "250GM","$40", true));
+        categoryItemModelArrayList.add(new CategoryItemModel(0,R.drawable.cake, "Cake", "100GM","$250", true));
+        categoryItemModelArrayList.add(new CategoryItemModel(0,R.drawable.cookies, "Cookies", "200GM","$120", true));
+        categoryItemModelArrayList.add(new CategoryItemModel(0,R.drawable.cheese, "Cheese", "150GM","$60", true));
+        categoryItemModelArrayList.add(new CategoryItemModel(0,R.drawable.muffin, "Muffin", "250GM","$70", true));
+        categoryModelArrayList.add(new CategoryModel(1, R.drawable.bread, R.color.yellow, "Bakery", categoryItemModelArrayList));
+
+        categoryItemModelArrayList = new ArrayList<>();
+        categoryItemModelArrayList.add(new CategoryItemModel(0,R.drawable.bread_icon, "Bread", "500GM","$65", true));
+        categoryItemModelArrayList.add(new CategoryItemModel(0,R.drawable.cake, "Cake", "500GM","$65", true));
+        categoryItemModelArrayList.add(new CategoryItemModel(0,R.drawable.cookies, "Cookies", "500GM","$65", true));
+        categoryItemModelArrayList.add(new CategoryItemModel(0,R.drawable.cheese, "Cheese", "500GM","$65", true));
+
+        categoryModelArrayList.add(new CategoryModel(2, R.drawable.milk, R.color.green, "Milk", categoryItemModelArrayList));
+        categoryModelArrayList.add(new CategoryModel(3, R.drawable.soft_drink, R.color.blue, "Soft drinks", categoryItemModelArrayList));
+        categoryModelArrayList.add(new CategoryModel(4, R.drawable.detergent, R.color.bbd_pink, "Detergents", categoryItemModelArrayList));
+        categoryModelArrayList.add(new CategoryModel(5, R.drawable.snack, R.color.purple, "Breakfast Snacks", categoryItemModelArrayList));
 
         category_listview.setExpanded(true);
         CategoryListViewAdapter categoryListViewAdapter = new CategoryListViewAdapter(MainActivity.this, categoryModelArrayList);

@@ -29,5 +29,14 @@
     <string name="recharge_history">RECHARGE HISTORY</string>
     <string name="billing_history">BILLING HISTORY</string>
     <string name="reserve_money">RESERVE MONEY</string>
+    <string name="weight">200g</string>
+    <string name="mrp_52">MRP $52</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="title">title</string>
+    <string name="item_name">Item Name</string>
+    <string name="price">Price</string>
+    <string name="product_description">Product Description</string>
+    <string name="rich_in_anti_oxidants_potatoes_helps_to_reduce_oxidative_stress_and_unwanted_inflammation_in_the_body_great_nature_s_gift_full_with_phytonutrients">Rich in anti-oxidants, Potatoes helps to reduce oxidative stress and unwanted inflammation in the body. Great nature\'s gift full with phytonutrients.</string>
+    <string name="add_to_cart">Add To Cart</string>
 
 </resources>

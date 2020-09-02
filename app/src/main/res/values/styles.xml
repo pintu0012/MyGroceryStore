@@ -10,6 +10,7 @@
     </style>
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
+        <item name="android:windowContentTransitions">true</item>
         <item name="windowNoTitle">true</item>
     </style>
 
@@ -23,4 +24,24 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
     </style>
 
+    <style name="MyCustomTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:fontFamily">@font/proximanovasemibold</item>
+    </style>
+
+    <style name="My_Widget.Design.FloatingActionButton" parent="android:Widget">
+        <item name="android:background">@drawable/design_fab_background</item>
+        <item name="android:clickable">false</item>
+        <item name="android:focusable">false</item>
+        <item name="backgroundTint">@color/bbd_red</item>
+        <item name="fabSize">auto</item>
+        <item name="elevation">@dimen/design_fab_elevation</item>
+        <item name="hoveredFocusedTranslationZ">@dimen/design_fab_translation_z_hovered_focused</item>
+        <item name="pressedTranslationZ">@dimen/design_fab_translation_z_pressed</item>
+        <item name="rippleColor">?attr/colorAccent</item>
+        <item name="borderWidth">@dimen/design_fab_border_width</item>
+        <item name="maxImageSize">@dimen/design_fab_image_size</item>
+        <item name="showMotionSpec">@animator/design_fab_show_motion_spec</item>
+        <item name="hideMotionSpec">@animator/design_fab_hide_motion_spec</item>
+    </style>
 </resources>

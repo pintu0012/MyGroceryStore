@@ -1,16 +1,20 @@
 package com.example.mygrocerystore.Model;
 
+import java.util.ArrayList;
+
 public class CategoryModel {
     private int id;
     private int image;
     private int color;
     private String title;
+    private ArrayList<CategoryItemModel> categoryItemModelArrayList;
 
-    public CategoryModel(int id, int image, int color, String title) {
+    public CategoryModel(int id, int image, int color, String title, ArrayList<CategoryItemModel> categoryItemModelArrayList) {
         this.id = id;
         this.image = image;
         this.color = color;
         this.title = title;
+        this.categoryItemModelArrayList = categoryItemModelArrayList;
     }
 
     public int getId() {
@@ -43,5 +47,13 @@ public class CategoryModel {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public ArrayList<CategoryItemModel> getCategoryItemModelArrayList() {
+        return categoryItemModelArrayList;
+    }
+
+    public void setCategoryItemModelArrayList(ArrayList<CategoryItemModel> categoryItemModelArrayList) {
+        this.categoryItemModelArrayList = categoryItemModelArrayList;
     }
 }

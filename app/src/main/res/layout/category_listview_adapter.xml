@@ -31,6 +31,7 @@
                 android:layout_below="@+id/imageview"
                 android:padding="@dimen/margin_3dp"
                 android:text="title"
+                android:fontFamily="@font/proximanovasemibold"
                 android:textColor="@color/white"
                 android:layout_centerHorizontal="true"/>
 

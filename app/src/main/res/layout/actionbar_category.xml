@@ -19,13 +19,13 @@
             />
 
         <TextView
+            android:id="@+id/actionbar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
             android:fontFamily="@font/proximanovasemibold"
             android:textColor="@color/black"
-            android:textSize="@dimen/dimen_18dp"
-            android:text="@string/chat"/>
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/dimen_18dp"/>
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

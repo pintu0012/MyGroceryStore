@@ -48,6 +48,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dimen_10dp"
                     android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
                     android:verticalSpacing="@dimen/dimen_5dp"
                     android:horizontalSpacing="@dimen/dimen_5dp"
                     android:numColumns="3"
